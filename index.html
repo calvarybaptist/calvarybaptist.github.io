@@ -1,0 +1,385 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Calvary Baptist Church</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F7F7F7;
+            color: #333;
+        }
+
+        header, nav, main, footer {
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #FFFFFF;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        nav {
+            background-color: #FF5733;
+            text-align: center;
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                margin: 0 10px;
+                font-size: 18px;
+                transition: color 0.3s;
+                display: inline-block;
+                padding: 10px 20px;
+                border-radius: 5px;
+                border: 1px solid transparent;
+            }
+
+                nav a:hover {
+                    color: #FF5733;
+                    background-color: white;
+                    border-color: #FF5733;
+                }
+
+        /* Mobile Menu Hover Effect */
+        .mobile-menu:hover {
+            background-color: #D32F00;
+        }
+
+        /* Media Query for Mobile Menu */
+        @media (max-width: 800px) {
+            /* Hide Mobile Menu Links Initially */
+            .nav-links-mobile {
+                display: none;
+            }
+
+            /* Show Mobile Menu Button */
+            .mobile-menu {
+                display: block;
+                text-align: center;
+                cursor: pointer;
+                padding: 10px;
+                background-color: #FF5733;
+                color: white;
+                border-radius: 5px;
+                font-size: 18px;
+                transition: background-color 0.3s;
+            }
+
+            .menu-icon {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .menu-label {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 10px;
+            }
+
+            /* Style for Mobile Menu Links */
+            .nav-links-mobile a {
+                text-align: center;
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        /* Additional CSS for desktop view */
+        @media (min-width: 801px) {
+            /* Show Regular Nav Bar */
+            .nav-links {
+                display: block !important;
+            }
+
+            /* Hide the mobile menu button on larger screens */
+            .mobile-menu {
+                display: none !important;
+            }
+        }
+
+        .hero {
+            height: 140px;
+            background-image: url('cover.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-align: center;
+            color: white;
+            padding: 5rem 0; /* Reverting to the original height */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+        }
+
+        .search-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .search-input,
+        .search-button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #CCC;
+            max-width: 400px; /* Adjust the maximum width as needed */
+            width: 100%; /* Full width on mobile devices */
+        }
+
+        .search-input {
+            margin-right: 10px;
+            font-size: 14px;
+            placeholder: "Search our website…";
+        }
+
+        .search-button {
+            background-color: #FF5733;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: auto; /* Adjust button width as needed */
+        }
+
+            .search-button:hover {
+                background-color: #D32F00;
+            }
+
+        .section {
+            padding: 2rem;
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+            .section h2 {
+                color: #333;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .section p {
+                margin-top: 10px;
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+        .cta {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+            .cta a {
+                background-color: #FF5733;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                text-decoration: none;
+                transition: background-color 0.3s;
+                margin-top: 15px;
+                display: inline-block;
+            }
+
+                .cta a:hover {
+                    background-color: #D32F00;
+                }
+
+        .logo {
+            height: 70px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        h1 {
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        footer {
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .facebook-button {
+            background-color: #FF5733;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+            .facebook-button:hover {
+                background-color: #D32F00;
+            }
+
+        .header-icon {
+            width: 40px;
+            vertical-align: middle;
+        }
+
+
+
+        /* New CSS for the sections */
+        .homepage-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 2rem;
+        }
+
+        .homepage-box-container {
+            text-align: center;
+            width: 30%;
+            padding: 1rem;
+            background-color: #FFFFFF;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin: 1rem;
+        }
+
+        .homepage-box-image {
+            width: 100%;
+            max-height: 350px; /* Adjust the maximum height as needed */
+            object-fit: cover; /* Maintain aspect ratio and cover container */
+            border-radius: 10px;
+        }
+
+        .homepage-box h2 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+            margin-top: 10px;
+        }
+
+        .homepage-box p {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .homepage-button {
+            background-color: #FF5733;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+            .homepage-button:hover {
+                background-color: #D32F00;
+            }
+
+        @media (max-width: 670px) {
+            .homepage-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .homepage-box-container {
+                width: 100%;
+                margin-top: 1rem;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Church Logo" class="logo">
+        <h1>Calvary Baptist Church</h1>
+    </header>
+    <nav>
+        <!-- Mobile Menu Button -->
+        <div id="mobile-menu" class="mobile-menu">
+            <div class="menu-icon">&#9776;</div>
+            <div class="menu-label">MENU</div>
+        </div>
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="ministries.html">Ministries</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <div class="hero">
+        <h2>Welcome to Calvary Baptist Church</h2>
+        <p>Sharing love and faith in our community.</p>
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search our website…">
+        <button class="search-button">Search</button>
+    </div>
+    <main>
+        <div class="homepage-section">
+            <!-- About Us Box -->
+            <div class="homepage-box-container">
+                <img src="about_image.jpg" alt="About Us Image" class="homepage-box-image">
+                <h2>About Us</h2>
+                <p>We are a welcoming church dedicated to spreading the message of God's love...</p>
+                <a href="about.html" class="homepage-button">Learn More</a>
+            </div>
+
+            <!-- Upcoming Events Box -->
+            <div class="homepage-box-container">
+                <img src="events_image.jpg" alt="Upcoming Events Image" class="homepage-box-image">
+                <h2>Upcoming Events</h2>
+                <p>Join us for various events and gatherings...</p>
+                <a href="events.html" class="homepage-button">View Events</a>
+            </div>
+
+            <!-- Contact Us Box -->
+            <div class="homepage-box-container">
+                <img src="contact_image.jpg" alt="Contact Us Image" class="homepage-box-image">
+                <h2>Contact Us</h2>
+                <p>Contact us if you have any questions or inquiries.</p>
+                <a href="contact.html" class="homepage-button">Contact Us</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Calvary Baptist Church. All rights reserved.</p>
+        <a class="facebook-button" href="https://www.facebook.com/CalvaryBaptistRavenswood?mibextid=LQQJ4d" target="_blank">Visit us on Facebook</a>
+    </footer>
+    <script>// Function to toggle the mobile menu
+        function toggleMobileMenu() {
+            var navLinksMobile = document.querySelector(".nav-links");
+            navLinksMobile.style.display = navLinksMobile.style.display === "block" ? "none" : "block";
+        }
+
+        // Add click event listener to the mobile menu button
+        document.getElementById("mobile-menu").addEventListener("click", toggleMobileMenu);</script>
+</body>
+</html>

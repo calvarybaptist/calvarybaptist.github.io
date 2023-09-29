@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Calvary Baptist Church</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F7F7F7;
+            color: #333;
+        }
+
+        /* Add a media query for mobile devices */
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-left,
+            .contact-right {
+                flex: 0 0 100%; /* Take full width on mobile */
+                margin: 0;
+            }
+
+                .contact-right iframe {
+                    width: 100%; /* Make the map responsive */
+                }
+        }
+
+        header, nav, main, footer {
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #FFFFFF;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        nav {
+            background-color: #FF5733;
+            text-align: center;
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                margin: 0 10px;
+                font-size: 18px;
+                transition: color 0.3s;
+                display: inline-block;
+                padding: 10px 20px;
+                border-radius: 5px;
+                border: 1px solid transparent;
+            }
+
+                nav a:hover {
+                    color: #FF5733;
+                    background-color: white;
+                    border-color: #FF5733;
+                }
+
+        .hero {
+            height: 140px;
+            background-image: url('cover.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-align: center;
+            color: white;
+            padding: 5rem 0; /* Reverting to the original height */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+        }
+
+        .search-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .search-input,
+        .search-button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #CCC;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .search-input {
+            margin-right: 10px;
+            font-size: 14px;
+            placeholder: "Search our website…";
+        }
+
+        .search-button {
+            background-color: #FF5733;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: auto;
+        }
+
+            .search-button:hover {
+                background-color: #D32F00;
+            }
+
+        .section.contact-form {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+            .section.contact-form h2 {
+                color: #333;
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .section.contact-form p {
+                color: #666;
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            .section.contact-form label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: #333;
+                text-align: left;
+            }
+
+            .section.contact-form input[type="text"],
+            .section.contact-form input[type="email"],
+            .section.contact-form textarea {
+                width: 100%;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #CCC;
+                margin: 10px auto;
+                display: block;
+            }
+
+            .section.contact-form textarea {
+                resize: vertical;
+                height: 150px;
+            }
+
+            .section.contact-form button[type="submit"] {
+                background-color: #FF5733;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+                .section.contact-form button[type="submit"]:hover {
+                    background-color: #D32F00;
+                }
+
+        .section.contact-section {
+            padding: 2rem;
+            border-bottom: 1px solid #E0E0E0;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+        }
+
+            .section.contact-section h2 {
+                color: #333;
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .contact-left {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+            .contact-left p {
+                font-size: 16px;
+                text-align: left;
+            }
+
+        .contact-right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer {
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .facebook-button {
+            background-color: #FF5733;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+            .facebook-button:hover {
+                background-color: #D32F00;
+            }
+
+        .logo {
+            height: 70px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        h1 {
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        /* Mobile Menu Hover Effect */
+        .mobile-menu:hover {
+            background-color: #D32F00;
+        }
+
+        /* Media Query for Mobile Menu */
+        @media (max-width: 800px) {
+            /* Hide Mobile Menu Links Initially */
+            .nav-links-mobile {
+                display: none;
+            }
+
+            /* Show Mobile Menu Button */
+            .mobile-menu {
+                display: block;
+                text-align: center;
+                cursor: pointer;
+                padding: 10px;
+                background-color: #FF5733;
+                color: white;
+                border-radius: 5px;
+                font-size: 18px;
+                transition: background-color 0.3s;
+            }
+
+            .menu-icon {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .menu-label {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 10px;
+            }
+
+            /* Style for Mobile Menu Links */
+            .nav-links-mobile a {
+                text-align: center;
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        /* Additional CSS for desktop view */
+        @media (min-width: 801px) {
+            /* Show Regular Nav Bar */
+            .nav-links {
+                display: block !important;
+            }
+
+            /* Hide the mobile menu button on larger screens */
+            .mobile-menu {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Church Logo" class="logo">
+        <h1>Calvary Baptist Church</h1>
+    </header>
+    <nav>
+        <!-- Mobile Menu Button -->
+        <div id="mobile-menu" class="mobile-menu">
+            <div class="menu-icon">&#9776;</div>
+            <div class="menu-label">MENU</div>
+        </div>
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="ministries.html">Ministries</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <div class="hero">
+        <h2>Contact Us</h2>
+        <p>Contact us if you have any questions or inquiries.</p>
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search our website…">
+        <button class="search-button">Search</button>
+    </div>
+    <main>
+        <!-- Contact Form Section -->
+        <div class="section contact-form">
+            <h2>Contact Form</h2>
+            <p>Send us a message using the form below:</p>
+            <form action="https://formspree.io/f/xgejnnnk" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="section contact-section">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <div class="contact-left">
+                    <p>
+                        <strong>Address:</strong><br>
+                        302 Henry St, Ravenswood, WV 26164<br><br>
+                        <strong>Mailing Address:</strong><br>
+                        PO Box 366, Ravenswood, WV 26164-0366<br><br>
+                        <strong>Service Times:</strong><br>
+                        Sunday School: 9:45 AM - 10:45 AM<br>
+                        Sunday Church Service: 11:00 AM<br>
+                        Sunday Evening Service: 6:00 PM<br>
+                        Wednesday Evening Service: 7:00 PM - 8:00 PM<br><br>
+                        <strong>Phone:</strong> +1 (304)-273-3144<br><br>
+                        <strong>Pastor:</strong> Bryan Arthur
+                    </p>
+                </div>
+                <div class="contact-right">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.334906581375!2d-81.75137488462213!3d38.94823197956662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884aa500a9404d6f%3A0x42f3b4da6d6b7880!2s302%20Henry%20St%2C%20Ravenswood%2C%20WV%2026164%2C%20USA!5e0!3m2!1sen!2s!4v1631700768620!5m2!1sen!2s" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Calvary Baptist Church. All rights reserved.</p>
+        <a class="facebook-button" href="https://www.facebook.com/CalvaryBaptistRavenswood?mibextid=LQQJ4d" target="_blank">Visit us on Facebook</a>
+    </footer>
+    <script>// Function to toggle the mobile menu
+        function toggleMobileMenu() {
+            var navLinksMobile = document.querySelector(".nav-links");
+            navLinksMobile.style.display = navLinksMobile.style.display === "block" ? "none" : "block";
+        }
+
+        // Add click event listener to the mobile menu button
+        document.getElementById("mobile-menu").addEventListener("click", toggleMobileMenu);</script>
+</body>
+</html>

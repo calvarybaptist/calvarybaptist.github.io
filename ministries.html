@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministries | Calvary Baptist Church</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F7F7F7;
+            color: #333;
+        }
+
+        header, nav, main, footer {
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #FFFFFF;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        nav {
+            background-color: #FF5733;
+            text-align: center;
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                margin: 0 10px;
+                font-size: 18px;
+                transition: color 0.3s;
+                display: inline-block;
+                padding: 10px 20px;
+                border-radius: 5px;
+                border: 1px solid transparent;
+            }
+
+                nav a:hover {
+                    color: #FF5733;
+                    background-color: white;
+                    border-color: #FF5733;
+                }
+
+        .mobile-menu:hover {
+            background-color: #D32F00;
+        }
+
+        @media (max-width: 800px) {
+            .nav-links-mobile {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+                text-align: center;
+                cursor: pointer;
+                padding: 10px;
+                background-color: #FF5733;
+                color: white;
+                border-radius: 5px;
+                font-size: 18px;
+                transition: background-color 0.3s;
+            }
+
+            .menu-icon {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .menu-label {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 10px;
+            }
+
+            .nav-links-mobile a {
+                text-align: center;
+                display: block;
+                margin: 10px 0;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
+        @media (min-width: 801px) {
+            .nav-links {
+                display: block !important;
+            }
+
+            .mobile-menu {
+                display: none !important;
+            }
+        }
+
+        .hero {
+            height: 140px;
+            background-image: url('cover.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-align: center;
+            color: white;
+            padding: 5rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+        }
+
+        .search-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .search-input,
+        .search-button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #CCC;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .search-input {
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .search-button {
+            background-color: #FF5733;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: auto;
+        }
+
+            .search-button:hover {
+                background-color: #D32F00;
+            }
+
+        .section {
+            padding: 2rem;
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+            .section h2 {
+                color: #333;
+                font-size: 24px;
+            }
+
+            .section p {
+                margin-top: 10px;
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+        .logo {
+            height: 70px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        h1 {
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        footer {
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .facebook-button {
+            background-color: #FF5733;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+            .facebook-button:hover {
+                background-color: #D32F00;
+            }
+
+        .header-icon {
+            width: 40px;
+            vertical-align: middle;
+        }
+
+        .youth-ministries-box,
+        .ms-ministries-box {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+            border: 1px solid #E0E0E0;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #FFFFFF;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .youth-ministries-text,
+        .ms-ministries-text {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .youth-ministries-image,
+        .ms-ministries-image {
+            height: auto;
+            display: block;
+        }
+
+        @media (min-width: 800px) {
+            .youth-ministries-box,
+            .ms-ministries-box {
+                flex-direction: row;
+                align-items: stretch; /* Ensure both columns have equal height */
+            }
+
+            .youth-ministries-text,
+            .ms-ministries-text {
+                flex: 1; /* Make text take up 50% of the width */
+                padding: 20px; /* Add padding as needed */
+            }
+
+            .youth-ministries-image,
+            .ms-ministries-image {
+                flex: 1; /* Make image take up 50% of the width */
+            }
+
+                .youth-ministries-image img,
+                .ms-ministries-image img {
+                    max-width: 100%; /* Make sure the image fills its container */
+                    height: auto;
+                    object-fit: cover;
+                }
+        }
+
+
+        @media (max-width: 800px) {
+            .youth-ministries-text,
+            .ms-ministries-text {
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                padding: 20px;
+                text-align: center;
+            }
+
+            .youth-ministries-image,
+            .ms-ministries-image {
+                text-align: center;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .youth-ministries-box .youth-ministries-image img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            .ms-ministries-box, .ms-ministries-box img {
+                width: 100%;
+                height: auto;
+                object-fit: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Church Logo" class="logo">
+        <h1>Calvary Baptist Church</h1>
+    </header>
+    <nav>
+        <div id="mobile-menu" class="mobile-menu">
+            <div class="menu-icon">&#9776;</div>
+            <div class="menu-label">MENU</div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="ministries.html">Ministries</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <div class="hero">
+        <h2>Ministries</h2>
+        <p>Transforming lives through faith, community, and service.</p>
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search our website…">
+        <button class="search-button">Search</button>
+    </div>
+    <main>
+        <div class="section">
+            <div class="youth-ministries-box">
+                <div class="youth-ministries-image">
+                    <img src="youth-ministries-image.jpg" alt="Youth Ministries Image">
+                </div>
+                <div class="youth-ministries-text">
+                    <h2>Youth Ministries</h2>
+                    <p>Our Youth Ministries provide a vibrant and supportive environment where young minds can grow in their relationship with God. Through engaging activities, inspiring worship, and meaningful lessons, we empower our youth to navigate life's challenges with unwavering faith...</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="ms-ministries-box">
+                <div class="ms-ministries-text">
+                    <h2>Men and Women's Ministries</h2>
+                    <p>Our Men & Women's Ministries are pillars of fellowship, offering a place where individuals of all ages and backgrounds come together to share in their spiritual journeys. Through regular gatherings, enriching Bible studies, and compassionate support, we foster a welcoming community where faith is strengthened...</p>
+                </div>
+                <div class="ms-ministries-image">
+                    <img src="ms-ministries-image.jpg" alt="M&W's Ministries Image">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Calvary Baptist Church. All rights reserved.</p>
+        <a class="facebook-button" href="https://www.facebook.com/CalvaryBaptistRavenswood?mibextid=LQQJ4d" target="_blank">Visit us on Facebook</a>
+    </footer>
+    <script>function toggleMobileMenu() {
+            var navLinksMobile = document.querySelector(".nav-links");
+            navLinksMobile.style.display = navLinksMobile.style.display === "block" ? "none" : "block";
+        }
+
+        document.getElementById("mobile-menu").addEventListener("click", toggleMobileMenu);</script>
+</body>
+</html>

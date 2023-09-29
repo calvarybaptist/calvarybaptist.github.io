@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Calvary Baptist Church</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F7F7F7;
+            color: #333;
+        }
+
+        header, nav, main, footer {
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #FFFFFF;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        nav {
+            background-color: #FF5733;
+            text-align: center;
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                margin: 0 10px;
+                font-size: 18px;
+                transition: color 0.3s;
+                display: inline-block;
+                padding: 10px 20px;
+                border-radius: 5px;
+                border: 1px solid transparent;
+            }
+
+                nav a:hover {
+                    color: #FF5733;
+                    background-color: white;
+                    border-color: #FF5733;
+                }
+
+        .hero {
+            height: 140px;
+            background-image: url('cover.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-align: center;
+            color: white;
+            padding: 5rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+        }
+
+        .search-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .search-input,
+        .search-button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #CCC;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .search-input {
+            margin-right: 10px;
+            font-size: 14px;
+            placeholder: "Search our website…";
+        }
+
+        .search-button {
+            background-color: #FF5733;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: auto;
+        }
+
+            .search-button:hover {
+                background-color: #D32F00;
+            }
+
+        main {
+            padding: 2rem;
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        footer {
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .facebook-button {
+            background-color: #FF5733;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+            .facebook-button:hover {
+                background-color: #D32F00;
+            }
+
+        .logo {
+            height: 70px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        h1 {
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        /* Responsive CSS for the calendar */
+        @media (max-width: 800px) {
+            iframe {
+                width: 100%;
+                height: 400px; /* Adjust the height as needed */
+            }
+        }
+
+        /* Mobile Menu Hover Effect */
+        .mobile-menu:hover {
+            background-color: #D32F00;
+        }
+
+        /* Media Query for Mobile Menu */
+        @media (max-width: 800px) {
+            /* Hide Mobile Menu Links Initially */
+            .nav-links-mobile {
+                display: none;
+            }
+
+            /* Show Mobile Menu Button */
+            .mobile-menu {
+                display: block;
+                text-align: center;
+                cursor: pointer;
+                padding: 10px;
+                background-color: #FF5733;
+                color: white;
+                border-radius: 5px;
+                font-size: 18px;
+                transition: background-color 0.3s;
+            }
+
+            .menu-icon {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .menu-label {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 10px;
+            }
+
+            /* Style for Mobile Menu Links */
+            .nav-links-mobile a {
+                text-align: center;
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        /* Additional CSS for desktop view */
+        @media (min-width: 801px) {
+            /* Show Regular Nav Bar */
+            .nav-links {
+                display: block !important;
+            }
+
+            /* Hide the mobile menu button on larger screens */
+            .mobile-menu {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Church Logo" class="logo">
+        <h1>Calvary Baptist Church</h1>
+    </header>
+    <nav>
+        <!-- Mobile Menu Button -->
+        <div id="mobile-menu" class="mobile-menu">
+            <div class="menu-icon">&#9776;</div>
+            <div class="menu-label">MENU</div>
+        </div>
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="ministries.html">Ministries</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <div class="hero">
+        <!-- Keep the hero image the same -->
+        <h2 style="color: white;">Upcoming Events</h2>
+        <p style="color: white;">Stay updated on our church events and gatherings.</p>
+    </div>
+    <div class="search-container" style="text-align: center;">
+        <input type="text" class="search-input" placeholder="Search our website…">
+        <button class="search-button">Search</button>
+    </div>
+    <main>
+        <!-- Center the calendar within the iframe -->
+        <div style="text-align: center;">
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showDate=1&showCalendars=1&title=Calvary%20Baptist&src=Y2FsdmFyeS5iYXB0aXN0MDlAZ21haWwuY29t&color=%23039BE5" style="border: 0; width: 100%; height: 450px; margin: 0 auto;" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Calvary Baptist Church. All rights reserved.</p>
+        <a class="facebook-button" href="https://www.facebook.com/CalvaryBaptistRavenswood?mibextid=LQQJ4d" target="_blank">Visit us on Facebook</a>
+    </footer>
+    <script>// Function to toggle the mobile menu
+        function toggleMobileMenu() {
+            var navLinksMobile = document.querySelector(".nav-links");
+            navLinksMobile.style.display = navLinksMobile.style.display === "block" ? "none" : "block";
+        }
+
+        // Add click event listener to the mobile menu button
+        document.getElementById("mobile-menu").addEventListener("click", toggleMobileMenu);</script>
+</body>
+</html>

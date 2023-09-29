@@ -1,0 +1,467 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Calvary Baptist Church</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F7F7F7;
+            color: #333;
+        }
+
+        header, nav, main, footer {
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #FFFFFF;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        nav {
+            background-color: #FF5733;
+            text-align: center;
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                margin: 0 10px;
+                font-size: 18px;
+                transition: color 0.3s;
+                display: inline-block;
+                padding: 10px 20px;
+                border-radius: 5px;
+                border: 1px solid transparent;
+            }
+
+                nav a:hover {
+                    color: #FF5733;
+                    background-color: white;
+                    border-color: #FF5733;
+                }
+
+        .mobile-menu:hover {
+            background-color: #D32F00;
+        }
+
+        @media (max-width: 800px) {
+            .nav-links-mobile {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+                text-align: center;
+                cursor: pointer;
+                padding: 10px;
+                background-color: #FF5733;
+                color: white;
+                border-radius: 5px;
+                font-size: 18px;
+                transition: background-color 0.3s;
+            }
+
+            .menu-icon {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .menu-label {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 10px;
+            }
+
+            .nav-links-mobile a {
+                text-align: center;
+                display: block;
+                margin: 10px 0;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
+        @media (min-width: 801px) {
+            .nav-links {
+                display: block !important;
+            }
+
+            .mobile-menu {
+                display: none !important;
+            }
+        }
+
+        .hero {
+            height: 140px;
+            background-image: url('cover.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-align: center;
+            color: white;
+            padding: 5rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+        }
+
+        .search-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .search-input,
+        .search-button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #CCC;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .search-input {
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .search-button {
+            background-color: #FF5733;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: auto;
+        }
+
+            .search-button:hover {
+                background-color: #D32F00;
+            }
+
+        .section {
+            padding: 2rem;
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+            .section h2 {
+                color: #333;
+                font-size: 24px;
+            }
+
+            .section p {
+                margin-top: 10px;
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+        .logo {
+            height: 70px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        h1 {
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        footer {
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .facebook-button {
+            background-color: #FF5733;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+            .facebook-button:hover {
+                background-color: #D32F00;
+            }
+
+        .header-icon {
+            width: 40px;
+            vertical-align: middle;
+        }
+
+        .staff-section {
+            background-color: #FFFFFF;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .staff-member {
+            display: inline-block;
+            vertical-align: top;
+            width: 150px;
+            text-align: center;
+            margin: 1.5rem;
+        }
+
+            .staff-member img {
+                width: 100%;
+                border-radius: 50%;
+            }
+
+        .staff-name {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .staff-title {
+            color: #FF5733;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .mission-box,
+        .history-box,
+        .ministries-box,
+        .choir-box {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+            border: 1px solid #E0E0E0;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #FFFFFF;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .mission-box,
+        .history-box,
+        .ministries-box,
+        .choir-box {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+            border: 1px solid #E0E0E0;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #FFFFFF;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .mission-text,
+        .history-text,
+        .ministries-text,
+        .choir-text {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .mission-image,
+        .history-image,
+        .ministries-image,
+        .choir-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (min-width: 800px) {
+            .mission-box,
+            .history-box,
+            .ministries-box,
+            .choir-box {
+                flex-direction: row;
+                align-items: stretch;
+            }
+
+            .mission-image {
+                flex: 1;
+                object-fit: cover;
+                max-height: 380px;
+            }
+
+            .ministries-image {
+                max-height: 400px;
+                flex: 1;
+                object-fit: cover;
+            }
+
+            .history-image,
+            .choir-image {
+                flex: 1;
+                max-height: 400px;
+                max-width: 450px;
+                object-fit: cover;
+            }
+        }
+
+
+        @media (max-width: 800px) {
+            .mission-box .mission-image img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            .history-box, .history-box img {
+                width: 100%;
+                height: auto;
+                object-fit: center;
+            }
+
+            .ministries-box .ministries-image img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            .choir-box .choir-box img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+
+        .ministries-button {
+            background-color: #FF5733;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin-top: 15px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Church Logo" class="logo">
+        <h1>Calvary Baptist Church</h1>
+    </header>
+    <nav>
+        <div id="mobile-menu" class="mobile-menu">
+            <div class="menu-icon">&#9776;</div>
+            <div class="menu-label">MENU</div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="ministries.html">Ministries</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <div class="hero">
+        <h2>About Us</h2>
+        <p>Discover the heart and soul of Calvary Baptist Church.</p>
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search our website…">
+        <button class="search-button">Search</button>
+    </div>
+    <main>
+        <div class="section">
+            <div class="staff-section">
+                <h2>Our Staff</h2>
+                <div class="staff-member">
+                    <img src="pastor-brian.jpg" alt="Pastor Brian Arthur">
+                    <div class="staff-name">Brian Arthur</div>
+                    <div class="staff-title">Pastor</div>
+                </div>
+                <div class="staff-member">
+                    <img src="staff-member1.jpg" alt="Staff Member 1">
+                    <div class="staff-name">Staff Member 1</div>
+                    <div class="staff-title">Title</div>
+                </div>
+                <div class="staff-member">
+                    <img src="staff-member2.jpg" alt="Staff Member 2">
+                    <div class="staff-name">Staff Member 2</div>
+                    <div class="staff-title">Title</div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="mission-box">
+                <div class="mission-image">
+                    <img src="mission-image.jpg" alt="Mission Image">
+                </div>
+                <div class="mission-text">
+                    <h2>Our Mission</h2>
+                    <p>At Calvary Baptist Church, we are on a mission to share God's love and grace with our community...</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="history-box">
+                <div class="history-text">
+                    <h2>Our History</h2>
+                    <p>Founded in (year), Calvary Baptist Church has a rich history of serving the people of Ravenswood...</p>
+                </div>
+                <div class="history-image">
+                    <img src="history-image.jpg" alt="History Image">
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="ministries-box">
+                <div class="ministries-image">
+                    <img src="ministries-image.jpg" alt="Ministries Image">
+                </div>
+                <div class="ministries-text">
+                    <h2>Our Ministries</h2>
+                    <p>At Calvary Baptist Church, our ministries are the heart of our community, each one dedicated to nurturing and strengthening the faith of our congregation. We have ministries for youth, men, and women.</p>
+                    <a href="ministries.html" class="ministries-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="choir-box">
+                <div class="choir-text">
+                    <h2>Our Choir</h2>
+                    <p>Our choir, a harmonious blend of voices and spirits, uplifts our congregation through the power of music, adding a soul-stirring dimension to our worship experience...</p>
+                </div>
+                <div class="choir-image">
+                    <img src="choir-image.jpg" alt="Choir Image">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Calvary Baptist Church. All rights reserved.</p>
+        <a class="facebook-button" href="https://www.facebook.com/CalvaryBaptistRavenswood?mibextid=LQQJ4d" target="_blank">Visit us on Facebook</a>
+    </footer>
+    <script>function toggleMobileMenu() {
+            var navLinksMobile = document.querySelector(".nav-links");
+            navLinksMobile.style.display = navLinksMobile.style.display === "block" ? "none" : "block";
+        }
+
+        document.getElementById("mobile-menu").addEventListener("click", toggleMobileMenu);</script>
+</body>
+</html>
