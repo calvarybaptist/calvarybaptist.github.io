@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -327,6 +327,13 @@
                 object-fit: cover;
             }
 
+            .mission-box,
+            .history-box,
+            .ministries-box,
+            .choir-box {
+                text-align: center;
+            }
+
             .history-box, .history-box img {
                 width: 100%;
                 height: auto;
@@ -383,8 +390,14 @@
         <p>Discover the heart and soul of Calvary Baptist Church.</p>
     </div>
     <div class="search-container">
-        <input type="text" class="search-input" placeholder="Search our website…">
-        <button class="search-button">Search</button>
+        <!-- Google Custom Search Script -->
+        <script async src="https://cse.google.com/cse.js?cx=d1c17d7e072ee417f"></script>
+
+        <!-- Search Input and Button -->
+        <form action="javascript:void(0);" onsubmit="searchGoogle()">
+            <input type="text" class="search-input" id="search-input" placeholder="Search our website…">
+            <button type="submit" class="search-button">Search</button>
+        </form>
     </div>
     <main>
         <div class="section">
@@ -462,6 +475,14 @@
             navLinksMobile.style.display = navLinksMobile.style.display === "block" ? "none" : "block";
         }
 
-        document.getElementById("mobile-menu").addEventListener("click", toggleMobileMenu);</script>
+        document.getElementById("mobile-menu").addEventListener("click", toggleMobileMenu);
+
+        function searchGoogle() {
+            var query = document.getElementById("search-input").value;
+            if (query) {
+                window.location.href = 'https://www.google.com/cse?cx=d1c17d7e072ee417f&q=' + encodeURIComponent(query);
+            }
+        }
+    </script>
 </body>
 </html>
