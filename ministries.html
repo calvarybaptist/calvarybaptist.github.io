@@ -239,7 +239,7 @@
             .youth-ministries-box,
             .ms-ministries-box {
                 flex-direction: row;
-                align-items: stretch; /* Ensure both columns have equal height */
+                display: flex;
             }
 
             .youth-ministries-text,
@@ -250,12 +250,14 @@
 
             .youth-ministries-image,
             .ms-ministries-image {
-                flex: 1; /* Make image take up 50% of the width */
+                max-width: 50%;
+                height: auto;
+                object-fit: cover;
             }
 
                 .youth-ministries-image img,
                 .ms-ministries-image img {
-                    max-width: 100%; /* Make sure the image fills its container */
+                    width: 100%;
                     height: auto;
                     object-fit: cover;
                 }
@@ -362,12 +364,12 @@
 
         document.getElementById("mobile-menu").addEventListener("click", toggleMobileMenu);
 
-        function searchGoogle() {
-            var query = document.getElementById("search-input").value;
-            if (query) {
-                window.location.href = 'https://www.google.com/cse?cx=d1c17d7e072ee417f&q=' + encodeURIComponent(query);
-            }
+    function searchGoogle() {
+        var query = document.getElementById("search-input").value;
+        if (query) {
+            window.location.href = 'https://www.google.com/cse?cx=d1c17d7e072ee417f&q=' + encodeURIComponent(query);
         }
+    }
     </script>
 </body>
 </html>
