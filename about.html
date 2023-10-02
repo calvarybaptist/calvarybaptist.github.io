@@ -245,7 +245,7 @@
         }
 
         .mission-box,
-        .history-box,
+        .service-box,
         .ministries-box,
         .choir-box {
             display: flex;
@@ -259,7 +259,7 @@
         }
 
         .mission-box,
-        .history-box,
+        .service-box,
         .ministries-box,
         .choir-box {
             display: flex;
@@ -273,7 +273,7 @@
         }
 
         .mission-text,
-        .history-text,
+        .service-text,
         .ministries-text,
         .choir-text {
             flex: 2;
@@ -281,7 +281,7 @@
         }
 
         .mission-image,
-        .history-image,
+        .service-image,
         .ministries-image,
         .choir-image {
             max-width: 100%;
@@ -297,7 +297,8 @@
             }
 
             .mission-image,
-            .ministries-image {
+            .ministries-image,
+            .choir-image {
                 max-width: 50%;
                 height: auto;
                 object-fit: cover;
@@ -309,14 +310,13 @@
                 padding: 20px;
             }
 
-            .history-box,
+            .service-box,
             .choir-box {
                 flex-direction: row;
                 align-items: stretch;
             }
 
-            .history-image,
-            .choir-image {
+            .service-image {
                 flex: 1;
                 max-height: 400px;
                 max-width: 450px;
@@ -329,6 +329,12 @@
                     height: auto;
                     object-fit: cover;
                 }
+
+            .choir-box .choir-image img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+            }
         }
 
 
@@ -342,13 +348,13 @@
             }
 
             .mission-box,
-            .history-box,
+            .service-box,
             .ministries-box,
             .choir-box {
                 text-align: center;
             }
 
-            .history-box, .history-box img {
+            .service-box, .service-box img {
                 width: 100%;
                 height: auto;
                 object-fit: center;
@@ -360,10 +366,10 @@
                 object-fit: cover;
             }
 
-            .choir-box .choir-box img {
+            .choir-box .choir-image img {
                 width: 100%;
                 height: auto;
-                object-fit: cover;
+                object-fit: center;
             }
         }
 
@@ -422,16 +428,6 @@
                     <div class="staff-name">Brian Arthur</div>
                     <div class="staff-title">Pastor</div>
                 </div>
-                <div class="staff-member">
-                    <img src="staff-member1.jpg" alt="Staff Member 1">
-                    <div class="staff-name">Staff Member 1</div>
-                    <div class="staff-title">Title</div>
-                </div>
-                <div class="staff-member">
-                    <img src="staff-member2.jpg" alt="Staff Member 2">
-                    <div class="staff-name">Staff Member 2</div>
-                    <div class="staff-title">Title</div>
-                </div>
             </div>
         </div>
         <div class="section">
@@ -441,18 +437,21 @@
                 </div>
                 <div class="mission-text">
                     <h2>Our Mission</h2>
-                    <p>At Calvary Baptist Church, we are on a mission to share God's love and grace with our community...</p>
+                    <p>At Calvary Baptist Church, we are on a mission to share God's love and grace with our community by nurturing spiritual growth, fostering strong relationships, and serving as a beacon of hope for all who seek a deeper connection with faith and purpose in their lives.</p>
                 </div>
             </div>
         </div>
         <div class="section">
-            <div class="history-box">
-                <div class="history-text">
-                    <h2>Our History</h2>
-                    <p>Founded in (year), Calvary Baptist Church has a rich history of serving the people of Ravenswood...</p>
+            <div class="service-box">
+                <div class="service-text">
+                    <h2>Our Services</h2>
+                    <p>Sunday School: 9:45 AM - 10:45 AM</p>
+                    <p>Sunday Church Service: 11:00 AM</p>
+                    <p>Sunday Evening Service: 6:00 PM</p>
+                    <p>Wednesday Evening Service: 7:00 PM - 8:00 PM</p>
                 </div>
-                <div class="history-image">
-                    <img src="history-image.jpg" alt="History Image">
+                <div class="service-image">
+                    <img src="service-image.jpg" alt="Service Image">
                 </div>
             </div>
         </div>
@@ -472,7 +471,7 @@
             <div class="choir-box">
                 <div class="choir-text">
                     <h2>Our Choir</h2>
-                    <p>Our choir, a harmonious blend of voices and spirits, uplifts our congregation through the power of music, adding a soul-stirring dimension to our worship experience...</p>
+                    <p>Our choir, a harmonious blend of voices and spirits, uplifts our congregation through the power of music, adding a soul-stirring dimension to our worship experience. Committed to glorifying God and enhancing our spiritual journey, our choir welcomes all who share a passion for music and a desire to praise the Lord through song.</p>
                 </div>
                 <div class="choir-image">
                     <img src="choir-image.jpg" alt="Choir Image">
