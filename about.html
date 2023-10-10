@@ -211,41 +211,8 @@
             vertical-align: middle;
         }
 
-        .staff-section {
-            background-color: #FFFFFF;
-            padding: 2rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin: 20px 0;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .staff-member {
-            display: inline-block;
-            vertical-align: top;
-            width: 150px;
-            text-align: center;
-            margin: 1.5rem;
-        }
-
-            .staff-member img {
-                width: 100%;
-                border-radius: 50%;
-            }
-
-        .staff-name {
-            font-size: 16px;
-            margin-top: 10px;
-        }
-
-        .staff-title {
-            color: #FF5733;
-            font-weight: 600;
-            margin-top: 5px;
-        }
-
         .mission-box,
-        .service-box,
+        .staff-box,
         .ministries-box,
         .choir-box {
             display: flex;
@@ -259,7 +226,7 @@
         }
 
         .mission-box,
-        .service-box,
+        .staff-box,
         .ministries-box,
         .choir-box {
             display: flex;
@@ -273,7 +240,7 @@
         }
 
         .mission-text,
-        .service-text,
+        .staff-text,
         .ministries-text,
         .choir-text {
             flex: 2;
@@ -281,7 +248,7 @@
         }
 
         .mission-image,
-        .service-image,
+        .staff-image,
         .ministries-image,
         .choir-image {
             max-width: 100%;
@@ -298,7 +265,8 @@
 
             .mission-image,
             .ministries-image,
-            .choir-image {
+            .choir-image,
+            .staff-image {
                 max-width: 50%;
                 height: auto;
                 object-fit: cover;
@@ -310,23 +278,24 @@
                 padding: 20px;
             }
 
-            .service-box,
+            .staff-box,
             .choir-box {
                 flex-direction: row;
                 align-items: stretch;
             }
 
-            .service-image {
-                flex: 1;
-                max-height: 400px;
-                max-width: 450px;
-                object-fit: cover;
+            .staff-image,
+            .mission-image,
+            .ministries-image {
+                height: 400px;
             }
 
+
                 .mission-box .mission-image img,
-                .ministries-box .ministries-image img {
+                .ministries-box .ministries-image img,
+                .staff-box .staff-image img {
                     width: 100%;
-                    height: auto;
+                    height: 400px;
                     object-fit: cover;
                 }
 
@@ -348,16 +317,22 @@
             }
 
             .mission-box,
-            .service-box,
+            .staff-box,
             .ministries-box,
             .choir-box {
                 text-align: center;
             }
 
-            .service-box, .service-box img {
+            .staff-box, .staff-box img {
                 width: 100%;
                 height: auto;
                 object-fit: center;
+            }
+
+            .staff-image img {
+                width: 100%;
+                height: 305px;
+                object-fit: cover;
             }
 
             .ministries-box .ministries-image img {
@@ -384,6 +359,19 @@
             transition: background-color 0.3s;
             margin-top: 15px;
             display: inline-block;
+        }
+
+        @media (max-width: 800px) {
+            .list {
+                list-style: none;
+                padding-left: 0;
+            }
+
+                .list li {
+                    margin-left: 0;
+                    padding-left: 20px;
+                    text-indent: -20px;
+                }
         }
     </style>
 </head>
@@ -421,16 +409,6 @@
     </div>
     <main>
         <div class="section">
-            <div class="staff-section">
-                <h2>Our Staff</h2>
-                <div class="staff-member">
-                    <img src="pastor-brian.jpg" alt="Pastor Brian Arthur">
-                    <div class="staff-name">Brian Arthur</div>
-                    <div class="staff-title">Pastor</div>
-                </div>
-            </div>
-        </div>
-        <div class="section">
             <div class="mission-box">
                 <div class="mission-image">
                     <img src="mission-image.jpg" alt="Mission Image">
@@ -442,16 +420,22 @@
             </div>
         </div>
         <div class="section">
-            <div class="service-box">
-                <div class="service-text">
-                    <h2>Our Services</h2>
-                    <p>Sunday School: 9:45 AM - 10:45 AM</p>
-                    <p>Sunday Church Service: 11:00 AM</p>
-                    <p>Sunday Evening Service: 6:00 PM</p>
-                    <p>Wednesday Evening Service: 7:00 PM - 8:00 PM</p>
+            <div class="staff-box">
+                <div class="staff-text">
+                    <h2>Our Staff</h2>
+                    <p>Pastor: Brian Arthur [In picture]</p>
+                    <p>Assistant Pastor: Mark Dennis</p>
+                    <p>Secretary: Linda Philyaw</p>
+                    <p>Deacons:</p>
+                    <ul class="list">
+                        <li>Butch Shaver</li>
+                        <li>Bryan Love</li>
+                        <li>John Farra</li>
+                        <li>Andy Wise</li>
+                    </ul>
                 </div>
-                <div class="service-image">
-                    <img src="service-image.jpg" alt="Service Image">
+                <div class="staff-image">
+                    <img src="pastor-brian.jpg" alt="Staff Image">
                 </div>
             </div>
         </div>
